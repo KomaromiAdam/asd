@@ -21,13 +21,16 @@ ubuntu@ubuntu:~$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo 
 OK
 ubuntu@ubuntu:~$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 ubuntu@ubuntu:~$ sudo apt-get update
-ubuntu@ubuntu:~$ apt-cache policy docker-ce
-ubuntu@ubuntu:~$ sudo apt-get install -y docker-ce
+ubuntu@ubuntu:~$ apt-cache policy docker
+ubuntu@ubuntu:~$ sudo apt-get install -y docker.io
 
 ubuntu@ubuntu:~$ sudo systemctl status docker
 ubuntu@ubuntu:~$ sudo apt install mc
 ubuntu@ubuntu:~$ sudo touch Dockerfile
 ubuntu@ubuntu:~$ sudo mc
+docker file (f4 és 3gomb)
+FROM nginx:alpine
+COPY . /usr/share/nginx/html
 ubuntu@ubuntu:~$ sudo docker build -t webserver-image:v1 . 
 ubuntu@ubuntu:~$ sudo docker images 
 ubuntu@ubuntu:~$ sudo mc
